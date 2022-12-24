@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route, NavLink, useParams } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from '../../pages/Home/Home';
 import { Movies } from '../../pages/Movies/Movies';
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
 import { Layout } from 'components/Layout/Layout';
 import { MovieItem } from 'components/MovieItem/MovieItem';
 import { Cast } from 'components/Cast/Cast';

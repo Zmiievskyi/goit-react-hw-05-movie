@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const { default: styled } = require('styled-components');
 
 export const HeaderStyled = styled.header`

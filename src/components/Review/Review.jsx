@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
 

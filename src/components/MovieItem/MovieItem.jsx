@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box } from '@mui/system';
 import { useLocation, Outlet, NavLink, useParams } from 'react-router-dom';
-import { Link, Section } from '../../pages/Home/HomeStyled';
+import { Link } from '../../pages/Home/HomeStyled';
 
 import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
 

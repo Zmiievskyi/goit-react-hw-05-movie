@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useParams } from 'react-router-dom';
+// import { Routes, Route, NavLink, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Link, Section } from './HomeStyled';
 import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';

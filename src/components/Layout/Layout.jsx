@@ -1,7 +1,8 @@
 // import { AppBar } from "@mui/material";
 import { Box } from '@mui/system';
-import { AppBar } from 'components/AppBar/AppBar';
 import { Outlet } from 'react-router-dom';
+import { AppBar } from 'components/AppBar/AppBar';
+
 
 export const Layout = () => {
   return (
