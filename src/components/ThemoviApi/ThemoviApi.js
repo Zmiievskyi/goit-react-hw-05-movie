@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const ThemoviApi = {
-    
   API: {
     KEY: '2c56ca605d93fc994eb0f57dccfe3295',
     URL: 'https://api.themoviedb.org',
@@ -35,10 +34,25 @@ export const ThemoviApi = {
     return actors.data.results;
   },
 
-  searchMovie: async function (query) {
+  // searchMovie: async function (query) {
+  //   const { KEY, URL } = this.API;
+  //   const URL_Search = `${URL}/3/search/movie/?api_key=${KEY}&query=${query}`;
+  //   const search = await axios.get(URL_Search);
+  //   return search.data.results;
+  // },
+  searchMovie:  function (query) {
     const { KEY, URL } = this.API;
     const URL_Search = `${URL}/3/search/movie/?api_key=${KEY}&query=${query}`;
-    const search = await axios.get(URL_Search);
-    return search.data.results;
+    // const search = fetch(URL_Search).then(r=>JSON.r);
+    // return search.data.results;
+
+    const search = fetch(URL_Search)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.status);
+        }
+        return response.json();
+      })
+      return search;
   },
 };

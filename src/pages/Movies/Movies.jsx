@@ -18,7 +18,8 @@ export const Movies = () => {
     try {
       const movieSearch = async () => {
         const movie = await ThemoviApi.searchMovie(movieName);
-        setList(movie);
+        console.log(movie);
+        setList(movie.results);
       };
       movieSearch();
     } catch (error) {
