@@ -3,9 +3,9 @@ import { Box } from '@mui/system';
 import { useLocation, Outlet, NavLink, useParams } from 'react-router-dom';
 import { Link } from '../../pages/Home/HomeStyled';
 
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
+import ThemoviApi from 'components/ThemoviApi/ThemoviApi';
 
-export const MovieItem = () => {
+const MovieItem = () => {
   const [film, setFilm] = useState(null);
 
   const { movieId } = useParams();
@@ -66,3 +66,4 @@ export const MovieItem = () => {
     </Box>
   );
 };
+export default MovieItem;

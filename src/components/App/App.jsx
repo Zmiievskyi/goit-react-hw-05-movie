@@ -1,19 +1,19 @@
-// import { lazy } from 'react';
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../../pages/Home/Home';
-import { Movies } from '../../pages/Movies/Movies';
-import { Layout } from 'components/Layout/Layout';
-import { MovieItem } from 'components/MovieItem/MovieItem';
-import { Cast } from 'components/Cast/Cast';
-import { Review } from 'components/Review/Review';
-// const Home = lazy(() => import('../../pages/Home/Home'));
-// const Movies = lazy(() => import('../../pages/Movies/Movies'));
-// const Layout = lazy(() => import('components/Layout/Layout'));
-// const MovieItem = lazy(() => import('components/MovieItem/MovieItem'));
-// const Cast = lazy(() => import('components/Cast/Cast'));
-// const Review = lazy(() => import('components/Review/Review'));
+// import { Home } from '../../pages/Home/Home';
+// import { Movies } from '../../pages/Movies/Movies';
+// import { Layout } from 'components/Layout/Layout';
+// import { MovieItem } from 'components/MovieItem/MovieItem';
+// import { Cast } from 'components/Cast/Cast';
+// import { Review } from 'components/Review/Review';
+const Home = lazy(() => import('../../pages/Home/Home'));
+const Movies = lazy(() => import('../../pages/Movies/Movies'));
+const Layout = lazy(() => import('components/Layout/Layout'));
+const MovieItem = lazy(() => import('components/MovieItem/MovieItem'));
+const Cast = lazy(() => import('components/Cast/Cast'));
+const Review = lazy(() => import('components/Review/Review'));
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <Routes>
@@ -30,3 +30,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;

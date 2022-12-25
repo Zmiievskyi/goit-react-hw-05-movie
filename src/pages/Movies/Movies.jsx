@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 // import { Box } from '@mui/system';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { Link } from '../Home/HomeStyled';
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
+import ThemoviApi from 'components/ThemoviApi/ThemoviApi';
 
-export const Movies = () => {
+const Movies = () => {
   const [list, setList] = useState('');
   const [params, setParams] = useSearchParams();
 
@@ -18,7 +18,6 @@ export const Movies = () => {
     try {
       const movieSearch = async () => {
         const movie = await ThemoviApi.searchMovie(movieName);
-        console.log(movie);
         setList(movie.results);
       };
       movieSearch();
@@ -29,10 +28,8 @@ export const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('before fetch');
     const name = e.target.elements.query.value;
     setParams({ query: name });
-    console.log('after fetch');
   };
 
   return (
@@ -57,3 +54,4 @@ export const Movies = () => {
     </>
   );
 };
+export default Movies;

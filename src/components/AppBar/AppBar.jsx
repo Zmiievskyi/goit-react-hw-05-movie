@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Box } from '@mui/system';
 // import { HeaderStyled, NavStyled, NavLinkStyled } from './HeaderStyled';
 
-export const AppBar = () => {
+const AppBar = () => {
   return (
     <Box
       as="header"
@@ -18,3 +18,4 @@ export const AppBar = () => {
     
   );
 };
+export default AppBar;

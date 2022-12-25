@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
+import  ThemoviApi  from 'components/ThemoviApi/ThemoviApi';
 
-export const Cast = () => {
+ const Cast = () => {
   const [acters, setActers] = useState([]);
   const { movieId } = useParams();
-console.log(acters);
+
 
   useEffect(() => {
     try {
@@ -37,3 +37,4 @@ console.log(acters);
     </ul>
   );
 };
+export default Cast;

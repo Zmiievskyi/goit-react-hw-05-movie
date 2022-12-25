@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react';
 // const { Link, Section } = lazy(() => import('./HomeStyled'));
 import { Link, Section } from './HomeStyled';
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
+import ThemoviApi from 'components/ThemoviApi/ThemoviApi';
 
-export const Home = () => {
+const Home = () => {
 
    const [list, setList] = useState([]);
 
@@ -28,3 +28,4 @@ export const Home = () => {
     </Section>
   );
 };
+export default Home;

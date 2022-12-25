@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { ThemoviApi } from 'components/ThemoviApi/ThemoviApi';
+import ThemoviApi from 'components/ThemoviApi/ThemoviApi';
 
-export const Review = () => {
+const Review = () => {
   const [review, setReview] = useState([]);
   const { movieId } = useParams();
 
@@ -30,3 +30,4 @@ export const Review = () => {
     </ul>
   );
 };
+export default Review;
