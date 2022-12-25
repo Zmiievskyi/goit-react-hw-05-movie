@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box } from '@mui/system';
+import { Skeleton } from '@mui/material';
 import { useLocation, Outlet, NavLink, useParams } from 'react-router-dom';
 import { Link } from '../../pages/Home/HomeStyled';
 
@@ -31,7 +32,7 @@ const MovieItem = () => {
 
   return (
     <Box display="flex" flexDirection="column">
-      {film !== null && (
+      {film !== null ? (
         <Box display="flex" borderBottom="1px solid grey" p="5px">
           <Box p="5px">
             <Link to={goBackHref.current}>go back</Link>
@@ -53,6 +54,13 @@ const MovieItem = () => {
             <p>{film.genres.map(item => `${item.name} `)}</p>
           </Box>
         </Box>
+      ) : (
+        <Skeleton
+          sx={{ bgcolor: 'grey.900' }}
+          variant="rectangular"
+          width={150}
+          height={225}
+        />
       )}
       <ul>
         <li>
