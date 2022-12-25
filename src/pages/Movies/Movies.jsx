@@ -28,8 +28,10 @@ export const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log('before fetch');
     const name = e.target.elements.query.value;
     setParams({ query: name });
+    console.log('after fetch');
   };
 
   return (

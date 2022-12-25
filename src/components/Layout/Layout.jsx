@@ -1,4 +1,4 @@
-// import { AppBar } from "@mui/material";
+import { lazy, Suspense } from 'react';
 import { Box } from '@mui/system';
 import { Outlet } from 'react-router-dom';
 import { AppBar } from 'components/AppBar/AppBar';
@@ -11,10 +11,12 @@ export const Layout = () => {
       flexDirection="column"
       flexWrap="wrap"
       alignContent="center"
-      p='50px'
+      p="50px"
     >
       <AppBar />
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </Box>
   );
 };
