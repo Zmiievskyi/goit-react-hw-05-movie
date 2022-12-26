@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { Box } from '@mui/system';
 import { Outlet } from 'react-router-dom';
-import AppBar from 'components/AppBar/AppBar';
-
+// import AppBar from 'components/AppBar/AppBar';
+import ResponsiveAppBar from 'components/AppBar/AppBarMui';
 
 const Layout = () => {
   return (
@@ -11,9 +11,9 @@ const Layout = () => {
       flexDirection="column"
       flexWrap="wrap"
       alignContent="center"
-      p="50px"
     >
-      <AppBar />
+      <ResponsiveAppBar/>
+      {/* <AppBar /> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
